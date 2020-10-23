@@ -49,9 +49,9 @@
             "#images": [
                 "//logo.faas.ovh/4/cover.png",
             ],
-            "#menu": [
-                "page/menu.html",
-            ],
+            //"#menu": [
+              //  "page/menu.html",
+            //],
             "#usermenu": [
                 "page/user_menu.html",
             ],
@@ -63,8 +63,9 @@
 
     <script>
         // Load dynamically contents depends url #hash
+        /*
         jl.url({
-            "#app-create": {
+            "#a": {
                 "#forms": {
                     "form/plesk.html": [
                         "form/submit.js",
@@ -72,7 +73,7 @@
                     ]
                 }
             },
-            "#app-list": {
+            "#b": {
                 "#forms": {
                     "form/plesk.html": [
                         "form/submit.js",
@@ -80,7 +81,7 @@
                     ]
                 }
             },
-            "#env-list": {
+            "#c": {
                 "#forms": {
                     "form/plesk.html": [
                         "form/submit.js",
@@ -89,6 +90,41 @@
                 }
             },
 
+        });
+        */
+        jl.url({
+            "#a": {
+                "#submenu": {
+                    "page/content.html": [
+                        "form/submit.js",
+                        "form/edit_list.js"
+                    ]
+                }
+            },
+            "#b": {
+                "#submenu": {
+                    "page/filesystem.html": [
+                        "form/submit.js",
+                        "form/edit_list.js"
+                    ]
+                }
+            },
+            "#c": {
+                "#submenu": {
+                    "page/project.html": [
+                        "form/submit.js",
+                        "form/edit_list.js"
+                    ]
+                }
+            },
+            "#d": {
+                "#submenu": {
+                    "page/organisation.html": [
+                        "form/submit.js",
+                        "form/edit_list.js"
+                    ]
+                }
+            },
         });
     </script>
 
@@ -199,6 +235,7 @@
             <div id="usermenu"></div>
         </nav>
         <div id="menu"></div>
+        <div id="submenu"></div>
 
         <div id="forms"></div>
 
