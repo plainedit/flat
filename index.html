@@ -14,7 +14,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 
-    <script src="//get.jloads.com/jloads.js?3">
+    <script src="//get.jloads.com/jloads.js?5">
         // Jloads is loading any media and content dynamically
     </script>
 
@@ -23,7 +23,7 @@
         jl.target({
             "head": [
                 //"css/fade-in.css",
-                "form/form.js",
+                // "form/form.js",
                 //"form/submit.js",
                 //"form/form.css",
                 //"menu/radio.css",
@@ -39,18 +39,17 @@
             ],
 
             //"#forms": [
-              //  "menu/radio.html"
+            //  "menu/radio.html"
             //],
 
             "article": [
-                //"form/app.html",
-                //"page/text.html"
+                "page/home.html"
             ],
-
-
-            "footer": [
-                "page/footer.html"
-            ]
+            //
+            //
+            // "footer": [
+            //     "page/footer.html"
+            // ]
         });
     </script>
 
@@ -67,42 +66,10 @@
 
     <script>
         // Load dynamically contents depends url #hash
-        /*
-        jl.url({
-            "#a": {
-                "#forms": {
-                    "form/plesk.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#b": {
-                "#forms": {
-                    "form/plesk.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#c": {
-                "#forms": {
-                    "form/plesk.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-
-        });
-        */
         menu.url({
             "#a": {
-                "article": {
-                    "page/text.html": [
-                        "menu/radio.html"
-                    ]
-                }
+                "#menu": "menu/radio.html",
+                "article": ["page/text.html"]
             },
             "#b": {
                 "article": {
@@ -157,11 +124,17 @@
             padding: 4px;
         }
 
+        article {
+            margin-top:210px;
+            padding:15px 15px 250px;
+            font-size: 30px;
+        }
 
         #usermenu a {
             color: white;
             font-size: medium;
         }
+
         #menu {
             margin: 0 0 0 5px;
             padding: 0;
@@ -181,13 +154,14 @@
             max-height: 40px;
         }
 
-
+/*
         #messages {
             height: 120px;
-            /*max-height: 100px;*/
+            !*max-height: 100px;*!
             overflow: scroll;
             color: black;
         }
+        */
     </style>
 
 </head>
@@ -197,15 +171,12 @@
 <div class="container fade-in" id="jloads">
     <!-- Content here -->
     <div class="jloads content">
-        <nav>
-
-        </nav>
-
-        <article>
-
-        </article>
+        <nav></nav>
 
         <div id="menu"></div>
+
+        <article></article>
+
 
         <div id="submenu"></div>
 
