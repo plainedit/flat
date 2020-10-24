@@ -11,8 +11,6 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
 
     <script src="//get.jloads.com/jloads.js?6">
         // Jloads is loading any media and content dynamically
@@ -69,21 +67,21 @@
         menu.url({
             "#a": {
                 "#submenu": "menu/content.html",
-                "article": "page/text.html"
+                "article": "page/editor.html"
             },
             "#b": {
                 "#submenu": "menu/filesystem.html",
                 "article": "page/text.html"
             },
             "#c": {
-                "#submenu": {
-                    "menu/project.html": [
-                        //"form/submit.js",
-                        //"form/edit_list.js"
-                    ]
-                }
+                "#submenu": "menu/project.html",
+                "article": "page/text.html"
             },
             "#d": {
+                "#submenu": "menu/organisation.html",
+                "article": "page/text.html"
+            },
+            "#e": {
                 "#submenu": {
                     "menu/organisation.html": [
                         //"form/submit.js",
@@ -162,15 +160,10 @@
             height: 40px;
             max-height: 40px;
         }
-
-/*
-        #messages {
-            height: 120px;
-            !*max-height: 100px;*!
-            overflow: scroll;
-            color: black;
+        .page.editor textarea{
+            width: 80%;
+            height: 500px;
         }
-        */
     </style>
 
 </head>
