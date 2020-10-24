@@ -14,7 +14,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 
-    <script src="//get.jloads.com/jloads.min.js">
+    <script src="//get.jloads.com/jloads.js?3">
         // Jloads is loading any media and content dynamically
     </script>
 
@@ -56,7 +56,12 @@
 
     <script>
 
-        var media = new jLoads({replace:1});
+        var menu = new jloads({
+            jloads: new Load({
+                target: "body",
+                replace: 1
+            }),
+        });
 
     </script>
 
@@ -91,7 +96,7 @@
 
         });
         */
-        media.url({
+        menu.url({
             "#a": {
                 "article": {
                     "page/text.html": [
