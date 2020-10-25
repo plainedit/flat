@@ -74,7 +74,7 @@ https://www.w3schools.com/howto/howto_css_labels.asp
 collapse
 https://www.w3schools.com/howto/howto_js_collapsible.asp
 
-sticky header for usbmenu
+sticky header for menu
 https://www.w3schools.com/howto/howto_js_sticky_header.asp
 
 active menu, tags

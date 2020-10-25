@@ -20,7 +20,7 @@
         // Load core of application
         jl.target({
             "head": [
-                //"css/fade-in.css",
+                "css/fade-in.css",
                 // "form/form.js",
                 //"form/submit.js",
                 //"form/form.css",
@@ -31,14 +31,31 @@
                 "article/style.css",
                 "grid/style.css",
                 "grid/script.js",
+                "grid-image/style.css",
+                "grid-image/script.js",
+                "search/style.css",
+                // "search/script.js",
+                "tags/style.css",
+                "tags/script.js",
             ],
             "nav": [
                 //"menu/main.html",
                 "navbar/page.html",
                 // "breadcrumbs/page.html",
             ],
-            "#menu": [
+            "#search": [
+                "search/page.html"
+            ],
+            "#tags": {
+                "tags/page.html": [
+                    "tags/init.js",
+                ],
+            },
+            "#breadcrumbs": [
                 "breadcrumbs/page.html"
+            ],
+            "#menu": [
+                // "breadcrumbs/page.html"
             ],
             "#tips": [
                 "page/home.html"
@@ -69,7 +86,7 @@
                 "article": "page/editor.html"
             },
             "#b": {
-                "#submenu": "menu/filesystem.html",
+                // "#submenu": "menu/filesystem.html",
                 // "article": "page/text.html"
                 "article": {
                     "grid/page.html": [
@@ -80,7 +97,7 @@
             },
             "#c": {
                 "#submenu": "menu/project.html",
-                "article": "page/text.html"
+                "article": "grid-image/page.html"
             },
             "#d": {
                 "#submenu": "menu/organisation.html",
@@ -124,9 +141,21 @@
             /*padding: 4px;*/
         }
 
-        #menu, #submenu, article {
+        #menu, #submenu, article, #search, #breadcrumbs, #tags {
             display: block;
-            padding-top: 50px;
+            /*padding-top: 50px;*/
+        }
+        #search {
+            padding-top: 70px;
+        }
+        #tags {
+            padding-top: 2px;
+        }
+        #menu {
+            padding-top: 2px;
+        }
+        #submenu {
+            padding-top: 2px;
         }
 
         article {
@@ -148,7 +177,7 @@
             /*padding: 10px;*/
             /*padding-top: 50px;*/
             /*width: 750px;*/
-            height: 50px;
+            /*height: 50px;*/
         }
 
         #menu a {
@@ -189,6 +218,11 @@
 <!-- Content here -->
 <!--    <div class="jloads content">-->
 <nav></nav>
+
+<div id="usermenu"></div>
+<div id="search"></div>
+<div id="tags"></div>
+<div id="breadcrumbs"></div>
 
 <div id="menu"></div>
 <div id="submenu"></div>
