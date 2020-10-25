@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    <script src="//get.jloads.com/jloads.js?6">
+    <script src="//get.jloads.com/jloads.js?3">
         // Jloads is loading any media and content dynamically
     </script>
 
@@ -27,10 +27,18 @@
                 "radio/style.css",
                 "navbar/style.css",
                 "navbar/shrink.js",
+                "breadcrumbs/style.css",
+                "article/style.css",
+                "grid/style.css",
+                "grid/script.js",
             ],
             "nav": [
                 //"menu/main.html",
                 "navbar/page.html",
+                // "breadcrumbs/page.html",
+            ],
+            "#menu": [
+                "breadcrumbs/page.html"
             ],
             "#tips": [
                 "page/home.html"
@@ -56,12 +64,19 @@
         // Load dynamically contents depends url #hash
         menu.url({
             "#a": {
+                // "#menu": "breadcrumbs/page.html",
                 "#submenu": "menu/content.html",
                 "article": "page/editor.html"
             },
             "#b": {
                 "#submenu": "menu/filesystem.html",
-                "article": "page/text.html"
+                // "article": "page/text.html"
+                "article": {
+                    "grid/page.html": [
+                        "grid/init.js",
+                    ]
+                }
+
             },
             "#c": {
                 "#submenu": "menu/project.html",
@@ -79,7 +94,7 @@
                     ]
                 }
             },
-        })
+        });
     </script>
 
 
@@ -105,13 +120,18 @@
         .jloads.content > div {
             /*border: 1px solid black;*/
             /*height: 100px;*/
-            margin: 0px;
-            padding: 4px;
+            /*margin: 0px;*/
+            /*padding: 4px;*/
+        }
+
+        #menu, #submenu, article {
+            display: block;
+            padding-top: 50px;
         }
 
         article {
             /*margin-top:290px;*/
-            padding:15px 15px 25px;
+            padding: 15px 15px 25px;
             font-size: 30px;
         }
 
@@ -121,22 +141,25 @@
         }
 
         #menu {
-            margin: 0 0 0 5px;
-            margin-top: 220px;
+            /*margin: 30px 10px 0 5px;*/
+            /*margin: 0 0 0 5px;*/
+            /*margin-top: 220px;*/
 
-            padding: 10px;
-            /*padding-top: 13px;*/
+            /*padding: 10px;*/
+            /*padding-top: 50px;*/
             /*width: 750px;*/
+            height: 50px;
         }
 
         #menu a {
-            color: #fb7e14;
-            font-size: medium;
+            /*color: #fb7e14;*/
+            /*font-size: medium;*/
         }
 
-        #submenu div{
-            margin: 0 10px 0 5px;
-            padding: 2px;
+        #submenu div {
+            padding-top: 1px;
+            /*margin: 20px 10px 0 5px;*/
+            /*padding: 2px;*/
             /*padding-top: 13px;*/
             /*width: 750px;*/
         }
@@ -144,13 +167,15 @@
         .block-inline {
             display: inline-block;
         }
+
         #images {
             padding: 0px;
             /*width: 170px;*/
             height: 40px;
             max-height: 40px;
         }
-        .page.editor textarea{
+
+        .page.editor textarea {
             width: 80%;
             height: 500px;
         }
@@ -160,27 +185,27 @@
 <body>
 
 
-<div class="container fade-in" id="jloads">
-    <!-- Content here -->
-    <div class="jloads content">
-        <nav></nav>
+<!--<div class="container fade-in" id="jloads">-->
+<!-- Content here -->
+<!--    <div class="jloads content">-->
+<nav></nav>
 
-        <div id="menu"></div>
-        <div id="submenu"></div>
-        <div id="tips"></div>
-        <article></article>
+<div id="menu"></div>
+<div id="submenu"></div>
+<article></article>
 
-
-        <div id="forms"></div>
+<div id="tips"></div>
 
 
+<div id="forms"></div>
 
-        <div id="messages" class="messages">
-        </div>
-    </div>
 
-    <footer></footer>
+<div id="messages" class="messages">
 </div>
+<!--    </div>-->
+
+<footer></footer>
+<!--</div>-->
 
 
 </body>
