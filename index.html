@@ -33,24 +33,28 @@
                 "grid/script.js",
                 "grid-image/style.css",
                 "grid-image/script.js",
-                "search/style.css",
-                // "search/script.js",
+                "navbar_search/style.css",
+
                 "tags/style.css",
                 "tags/script.js",
             ],
-            "nav": [
+            "nav": {
                 //"menu/main.html",
-                "navbar/page.html",
+                // "navbar/page.html",
                 // "breadcrumbs/page.html",
-            ],
-            "#search": [
-                "search/page.html"
-            ],
-            "#tags": {
-                "tags/page.html": [
-                    "tags/init.js",
-                ],
+                "navbar_search/page.html": [
+                    "navbar_search/script.js",
+                    "navbar_search/init.js"
+                ]
             },
+            "#search": [
+                // "search/page.html"
+            ],
+            // "#tags": {
+            //     "tags/page.html": [
+            //         "tags/init.js",
+            //     ],
+            // },
             "#breadcrumbs": [
                 "breadcrumbs/page.html"
             ],
@@ -82,7 +86,7 @@
         menu.url({
             "#a": {
                 // "#menu": "breadcrumbs/page.html",
-                "#submenu": "menu/content.html",
+                // "#submenu": "menu/content.html",
                 "article": "page/editor.html"
             },
             "#b": {
@@ -96,11 +100,11 @@
 
             },
             "#c": {
-                "#submenu": "menu/project.html",
+                // "#submenu": "menu/project.html",
                 "article": "grid-image/page.html"
             },
             "#d": {
-                "#submenu": "menu/organisation.html",
+                // "#submenu": "menu/organisation.html",
                 "article": "page/text.html"
             },
             "#e": {
@@ -108,6 +112,13 @@
                     "menu/organisation.html": [
                         //"form/submit.js",
                         //"form/edit_list.js"
+                    ]
+                }
+            },
+            "#results": {
+                "article": {
+                    "grid/page.html": [
+                        "grid/init.js",
                     ]
                 }
             },
@@ -146,7 +157,7 @@
             /*padding-top: 50px;*/
         }
         #search {
-            padding-top: 70px;
+            /*padding-top: 70px;*/
         }
         #tags {
             padding-top: 2px;
