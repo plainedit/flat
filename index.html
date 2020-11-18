@@ -17,7 +17,9 @@
     </script>
 
     <script>
+        // deploy.jloads.com/base64=ejkiojfweiojweoifjeiowjfew
         // Load core of application
+        // target -> xcontent
         jl.target({
             "head": [
                 "css/fade-in.css",
@@ -34,7 +36,7 @@
                 "grid-image/style.css",
                 "grid-image/script.js",
                 "navbar_search/style.css",
-
+                "navbar_search/script.js",
                 "tags/style.css",
                 "tags/script.js",
             ],
@@ -43,7 +45,6 @@
                 // "navbar/page.html",
                 // "breadcrumbs/page.html",
                 "navbar_search/page.html": [
-                    "navbar_search/script.js",
                     "navbar_search/init.js"
                 ]
             },
@@ -156,15 +157,19 @@
             display: block;
             /*padding-top: 50px;*/
         }
+
         #search {
             /*padding-top: 70px;*/
         }
+
         #tags {
             padding-top: 2px;
         }
+
         #menu {
             padding-top: 2px;
         }
+
         #submenu {
             padding-top: 2px;
         }

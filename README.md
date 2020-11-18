@@ -7,6 +7,18 @@ the filters helps to find correnct contects with widely streaming.
 [start](https://flat.plainedit.com/index.html)
 
 ## TODO:
+przenieść moduły do jloads.com jako pojedyncze projekty,
+kazdy ma własną subdomenę
+
+generowane z organizacji,
+lista organizacji oraz repozytoriow jest manualnie zmieniana
+ze względu na bezpieczenstwo
+to dodatkowa warstwa pomiedzy repozytoriami
+
+dodatkowo separowanie kazdego z osobna:
+
+    
+    [package].[username/organisation].jbodys.com
 
 ### GRID view to show many files
 + list / grid view
