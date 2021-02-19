@@ -1,7 +1,14 @@
-# flatedit docs
+# flat.plainedit.com
+
 Example editor APP with analyzing content and filtering whole filesystem and API
 to find correct data.
 the filters helps to find correnct contects with widely streaming.
+
+piping-screen-share
+Netlify Status
+Launch now as Web App
+
+Screen Share via Piping Server with End-to-End Encryption
 
 
 [start](https://flat.plainedit.com/index.html)
